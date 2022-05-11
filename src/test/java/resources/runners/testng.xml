@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test suite">
+    <!--<groups>
+        <run>
+            <include name="sanity"></include>
+            <include name="smoke"></include>
+            <include name="regression"></include>
+        </run>
+    </groups>-->
+    <listeners>
+        <listener class-name="com.orangehrmlive.demo.customlisteners.CustomListeners"></listener>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="Test">
+        <classes>
+            <class name="com.orangehrmlive.demo.testsuite.LoginTest"/>
+            <class name="com.orangehrmlive.demo.testsuite.UserTest"/>
+        </classes>
+    </test>
+    <!-- <test name="Create Account Test">
+         <classes>
+             <class name="com.automation.testsuite.CreateAccountPageTest"></class>
+         </classes>
+     </test>
+     <test name="Women Category Test">
+         <classes>
+             <class name="com.automation.testsuite.WomenCategoryPageTest"></class>
+         </classes>
+     </test>-->
+</suite>
